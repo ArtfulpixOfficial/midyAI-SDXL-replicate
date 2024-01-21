@@ -7,6 +7,20 @@ const app = express();
 const port = process.env.PORT || 3001;
 
 app.use(cors());
+
+app.use(
+  cors({
+    origin: [
+      "*",
+      "https://midy-ai-sdxl.vercel.app",
+      "https://midy-ai-sdxl-replicate.vercel.app",
+      "https://text-to-image-ai-app.vercel.app/",
+    ],
+    credentials: true,
+  })
+);
+
+
 app.use(express.json());
 
 app.get("/", (req, res) => {
