@@ -1,6 +1,6 @@
 export async function clipBoardAPI(prompt) {
   console.log(prompt);
-  const reqBody = JSON.stringyfy({prompt});
+  const reqBody = JSON.stringify({prompt});
   const {
     result: [imageURL],
   } = await fetch(
