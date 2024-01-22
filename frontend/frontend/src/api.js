@@ -3,7 +3,7 @@ export async function clipBoardAPI(prompt) {
   const {
     result: [imageURL],
   } = await fetch(
-    `https://midy-ai-sdxl-replicate.vercel.app/api/convert`,
+    `https://midy-ai-sdxl-replicate-test.vercel.app/api/convert`,
     {
       method: "POST",
       headers: {
