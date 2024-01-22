@@ -1,5 +1,6 @@
 export async function clipBoardAPI(prompt) {
   console.log(prompt);
+  const reqBody = JSON.stringyfy({prompt});
   const {
     result: [imageURL],
   } = await fetch(
@@ -9,7 +10,7 @@ export async function clipBoardAPI(prompt) {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ prompt }),
+      body: reqBody,
     }
   ).then((res) => res.json());
   console.log("Hello");
