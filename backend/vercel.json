@@ -1,6 +1,6 @@
 {
   "functions":{
-    "index.js": {
+    "api/*.js": {
       "maxDuration": 60
     }
   }
